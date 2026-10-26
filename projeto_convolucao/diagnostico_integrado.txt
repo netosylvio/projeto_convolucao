@@ -1,0 +1,62 @@
+===== DIAGNOSTICO INTEGRADO =====
+Sun Oct 25 11:53:15 UTC 2026
+
+===== COMPILACAO C SEM VETORIZACAO =====
+Compilacao C: OK
+
+===== COMPILACAO C++ COM OPENCV =====
+Command 'g++' not found, but can be installed with:
+sudo apt install g++
+ERRO na compilacao OpenCV
+
+===== EXECUCAO C =====
+C convolution: N=1024, repeticoes=30, checksum=517016.505600452
+Tempo C: 0.09 s
+
+===== EXECUCAO OPENCV =====
+
+===== PERF: CICLOS E INSTRUCOES NOS P-CORES =====
+C convolution: N=1024, repeticoes=30, checksum=517016.505600452
+
+ Performance counter stats for 'taskset -c 0 ./teste_c':
+
+         426651019      cpu_core/cpu-cycles/                                                  
+        2670516492      cpu_core/instructions/                                                
+
+       0.096858082 seconds time elapsed
+
+       0.090757000 seconds user
+       0.005984000 seconds sys
+
+
+
+===== PERF: EVENTO DE CACHE L2 =====
+C convolution: N=1024, repeticoes=30, checksum=517016.505600452
+
+ Performance counter stats for 'taskset -c 0 ./teste_c':
+
+           4441069      cpu_core/l2_rqsts.miss/                                                 (99.50%)
+
+       0.093333108 seconds time elapsed
+
+       0.090273000 seconds user
+       0.003009000 seconds sys
+
+
+
+===== RAPL: ENERGIA ANTES E DEPOIS =====
+C convolution: N=1024, repeticoes=30, checksum=517016.505600452
+Tempo para energia: 0.09 s
+Energia inicial: 15408140120 uJ
+Energia final:   15410371376 uJ
+Energia medida:  2.231256 J
+Nota: o domínio package-0 mede o pacote, não exclusivamente o processo.
+
+===== MEMORIA E ARMAZENAMENTO =====
+               total        used        free      shared  buff/cache   available
+Mem:            31Gi       4.9Gi        17Gi       2.0Gi        11Gi        26Gi
+Swap:             0B          0B          0B
+Filesystem      Size  Used Avail Use% Mounted on
+/cow             16G  1.5G   15G  10% /
+
+===== FIM DO DIAGNOSTICO =====

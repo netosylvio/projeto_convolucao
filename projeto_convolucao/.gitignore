@@ -1,0 +1,18 @@
+# Executáveis compilados
+baseline
+localidade
+simd_avx2
+teste_c
+teste_opencv
+opencv_benchmark
+tiling
+tiling_simd
+
+# Arquivos de compilação
+*.o
+*.out
+core
+core.*
+
+# Resultados temporários
+resultado_energia.txt
