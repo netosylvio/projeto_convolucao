@@ -1,0 +1,28 @@
+pragma_simd.c:21:23: missed: couldn't vectorize loop
+pragma_simd.c:29:22: missed: not vectorized: complicated access pattern.
+pragma_simd.c:84:34: missed: couldn't vectorize loop
+pragma_simd.c:84:34: missed: not vectorized: number of iterations cannot be computed.
+pragma_simd.c:66:26: missed: couldn't vectorize loop
+pragma_simd.c:67:18: missed: not vectorized: no vectype for stmt: *_20 = _21;
+ scalar_type: float
+pragma_simd.c:44:19: missed: statement clobbers memory: parsed_44 = strtol (_4, &endptr, 10);
+pragma_simd.c:55:20: missed: statement clobbers memory: input_48 = malloc (_12);
+pragma_simd.c:56:21: missed: statement clobbers memory: output_50 = calloc (powmult_34, 4);
+pragma_simd.c:71:5: missed: statement clobbers memory: convolution (input_48, output_50, n_45);
+pragma_simd.c:77:5: missed: statement clobbers memory: clock_gettime (1, &start);
+pragma_simd.c:80:9: missed: statement clobbers memory: convolution (input_48, output_50, n_45);
+pragma_simd.c:83:9: missed: statement clobbers memory: clock_gettime (1, &end);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:118:10: missed: statement clobbers memory: __printf_chk (2, "Versao: pragma omp simd\n");
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:118:10: missed: statement clobbers memory: __printf_chk (2, "Matriz: %d x %d\n", n_45, n_45);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:118:10: missed: statement clobbers memory: __printf_chk (2, "Iteracoes: %ld\n", iterations_122);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:118:10: missed: statement clobbers memory: __printf_chk (2, "Tempo medido: %.6f s\n", _121);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:118:10: missed: statement clobbers memory: __printf_chk (2, "Tempo por iteracao: %.6f s\n", _31);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:118:10: missed: statement clobbers memory: __printf_chk (2, "Desempenho estimado: %.2f MFLOP/s\n", mflops_61);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:118:10: missed: statement clobbers memory: __printf_chk (2, "Checksum: %.9f\n", checksum_120);
+pragma_simd.c:106:5: missed: statement clobbers memory: free (input_48);
+pragma_simd.c:107:5: missed: statement clobbers memory: free (output_50);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:111:10: missed: statement clobbers memory: __fprintf_chk (stderr.3_16, 2, "Erro ao alocar memoria para matriz %dx%d.\n", n_45, n_45);
+pragma_simd.c:60:9: missed: statement clobbers memory: free (input_48);
+pragma_simd.c:61:9: missed: statement clobbers memory: free (output_50);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:111:10: missed: statement clobbers memory: __fprintf_chk (stderr.2_10, 2, "Tamanho permitido: 1024, 2048 ou 4096.\n");
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:111:10: missed: statement clobbers memory: __fprintf_chk (stderr.0_2, 2, "Uso: %s TAMANHO\n", _1);

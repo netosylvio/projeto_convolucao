@@ -1,0 +1,6 @@
+pragma_simd.c:24:17: optimized: loop vectorized using 16 byte vectors
+pragma_simd.c:24:17: optimized: loop vectorized using 8 byte vectors
+pragma_simd.c:90:26: optimized: loop vectorized using 16 byte vectors
+pragma_simd.c:24:17: optimized: loop vectorized using 16 byte vectors
+pragma_simd.c:24:17: optimized: loop vectorized using 8 byte vectors
+pragma_simd.c:90:26: optimized: loop vectorized using 16 byte vectors

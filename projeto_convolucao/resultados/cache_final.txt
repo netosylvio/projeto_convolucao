@@ -1,0 +1,51 @@
+==========================================
+TESTE FINAL DE CACHE - CONVOLUCAO 2D
+Tue Oct 27 23:51:33 UTC 2026
+Matriz: 4096 x 4096
+Repeticoes do perf: 1
+==========================================
+
+===== BASELINE: MISSES DE CACHE =====
+Versao: baseline C sem vetorizacao automatica
+Matriz: 4096 x 4096
+Iteracoes: 131
+Tempo medido: 2.011630 s
+Tempo por iteracao: 0.015356 s
+Desempenho estimado: 18555.29 MFLOP/s
+Checksum: 8296605.198801514
+
+ Performance counter stats for 'taskset -c 0 ./baseline 4096':
+
+          10321034      cpu_core/l1-dcache-load-misses/                                         (99.98%)
+         496918089      cpu_core/l2_rqsts.miss/                                                 (99.98%)
+             73786      cpu_core/LLC-load-misses/                                               (99.98%)
+
+       2.081336396 seconds time elapsed
+
+       2.050863000 seconds user
+       0.029998000 seconds sys
+
+
+
+===== SIMD AVX2: MISSES DE CACHE =====
+Versao: SIMD AVX2 explicito
+Matriz: 4096 x 4096
+Iteracoes: 282
+Tempo total: 2.004722 s
+Tempo por iteracao: 7.108942 ms
+Checksum: 8296605.198801514
+
+ Performance counter stats for 'taskset -c 0 ./simd_avx2 4096':
+
+         238192078      cpu_core/l1-dcache-load-misses/                                         (99.97%)
+        1052395089      cpu_core/l2_rqsts.miss/                                                 (99.97%)
+          16730322      cpu_core/LLC-load-misses/                                               (99.97%)
+
+       2.063606573 seconds time elapsed
+
+       2.034262000 seconds user
+       0.028989000 seconds sys
+
+
+
+===== FIM DOS TESTES =====
